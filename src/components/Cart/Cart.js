@@ -15,7 +15,7 @@ const Cart = ({ cart, setCart }) => {
     const productIndex = updatedCart.findIndex(
       (item) => item._id === productId
     );
-    updatedCart.splice( );
+    updatedCart.splice(productIndex, 1);
     setCart(updatedCart);
   };
 
