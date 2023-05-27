@@ -15,7 +15,7 @@ const Cart = ({ cart, setCart }) => {
     const productIndex = updatedCart.findIndex(
       (item) => item._id === productId
     );
-    updatedCart.splice(productIndex, 1);
+    updatedCart.splice( );
     setCart(updatedCart);
   };
 
@@ -32,7 +32,7 @@ const Cart = ({ cart, setCart }) => {
     } else {
       acc.push({ ...item, quantity: 1 });
     }
-    return acc;
+    return acc.sort((a, b) => a._id.localeCompare(b._id));
   }, []);
 
   return (

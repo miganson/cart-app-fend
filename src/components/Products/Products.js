@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Products.css";
 
 const Product = ({ cart, setCart }) => {
@@ -13,7 +13,6 @@ const Product = ({ cart, setCart }) => {
       .get("http://localhost:8000/products")
       .then((res) => {
         setProducts(res.data);
-        console.log("this loaded");
       })
       .catch((err) => {
         console.error(err);
